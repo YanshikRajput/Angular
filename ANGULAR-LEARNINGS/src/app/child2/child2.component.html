@@ -1,0 +1,46 @@
+ <!-- <input type="text" name="fname">
+ <button class="btn btn-warning">Send Data</button>
+     <div style="float:left;">
+ Price:<h2>{{product.Price}}</h2>
+ Title:<h2>{{product.Title}}</h2>
+ ExpiryDate:<h2>{{product.ExpiryDate}}</h2>
+</div>
+<br> -->
+<div style="width:100%;float: right;">
+<div class="col-md-8 my-3">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th >
+                    Title
+                </th>
+                <th >
+                    Price
+                </th>
+                <th >
+                    Expiry Date
+                </th>
+                <th >
+                    Quantity
+                </th>
+                <th >
+                    In Stock
+                </th>
+ 
+            </tr>
+        </thead>
+        <tbody>
+            
+                <td>{{product.Id}}</td>
+                <td>{{product.Title}}</td>
+                <td>{{product.Price | currency :"INR"}}</td>
+                <td>{{product.ExpiryDate | date}}</td>
+                <td>{{product.Quantity}}</td>
+                <td>{{product.isInStock}}</td>
+          
+        </tbody>
+    </table>
+</div>

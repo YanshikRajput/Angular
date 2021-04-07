@@ -1,0 +1,12 @@
+.tshirtmargin{
+    margin: 0px auto;
+    transition: 3s ease-in-out;
+    
+}
+.colorInput{
+    height: 3rem;
+    width: 15rem;
+    padding: 1rem;
+    border: 2px solid navy;
+    border-radius: 0.7rem;
+}

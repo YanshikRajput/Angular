@@ -1,0 +1,11 @@
+.size {
+    font-size: 25px;
+    
+} 
+.colorInput{
+    height: 3rem;
+    width: 15rem;
+    padding: 1rem;
+    border: 2px solid navy;
+    border-radius: 0.7rem;
+}

@@ -1,0 +1,59 @@
+<div class="row">
+    <div class="col-md-2 "></div>
+    <div class="col-md-8 mt-5">
+    <form (ngSubmit) = 'login()' [formGroup] = 'loginform' novalidate class="form-group">
+        <input formControlName='email'
+        type ="text"
+        class="form-control my-3"
+        placeholder="Enter Email">
+        <div class="alert alert-danger" *ngIf="loginform?.get('email')?.hasError('required') && loginform?.get('email')?.touched">
+            Email is required
+        </div>
+        <input formControlName ='password'
+        type ="password"
+        class ="form-control my-3"
+        placeholder="Enter Password">
+        <div class="alert alert-danger" *ngIf="!loginform?.get('password')?.valid && loginform?.get('password')?.touched">
+            Password is required and shoud less than 5 characters
+        </div>
+
+        <input formControlName ='age'
+        type ="number"
+        class ="form-control my-3"
+        placeholder="Enter Age">
+        <div class="alert alert-danger" *ngIf="loginform?.get('age')?.dirty && loginform?.get('age')?.errors && loginform?.get('age')?.errors?.ageRange">
+            Age should be greater than {{min}} and less than {{max}}
+        </div>
+        <input formControlName='phonenumber'
+        type ="text"
+        class="form-control my-3"
+        placeholder="Enter phonenumber">
+        <div class="alert alert-danger" *ngIf="loginform?.get('phonenumber')?.hasError('required') && loginform?.get('phonenumber')?.touched">
+            phonenumber is required
+        </div>
+        <label class="contro-label my-3">Send Notification </label>
+           
+        <label class="radio-inline mx-2">
+            <input type="radio" value="phone" formControlName="notification">phone
+        </label>
+        <label class="radio-inline mx-2">
+           <input type="radio" value="email" formControlName="notification">email
+       </label>
+
+
+
+    <br>
+
+    <button type="submit" [disabled] = "loginform.invalid" class="btn btn-danger mx-2">Login</button>
+    <button type="button"(click)='cancel()' class="btn btn-info mx-2">Reset</button>
+    </form>
+</div>
+<div class="col-md-2 "></div>
+</div>
+<footer class="page-footer font-small blue fixed-bottom">
+    <div class="footer-copyright text-center py-3" style="color: grey;">
+        <h5>Explanation :</h5>
+        <p>This Demo is implemented with the help of reactive forms in Angular.
+        </p>
+    </div>
+  </footer>

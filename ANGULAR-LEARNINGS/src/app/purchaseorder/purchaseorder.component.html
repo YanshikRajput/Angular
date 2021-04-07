@@ -1,0 +1,36 @@
+<div>
+    <h1>
+        {{PurchaseItem.PurchaseTitle}}
+    </h1>
+    <p class="lead">VendorName : {{PurchaseItem.VendorName}} | Purchase Date: {{PurchaseItem.PurchaseDate}}</p>
+    <hr class="my-4">
+    <div class="text-center">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                     <th>Price</th>
+                     <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let i of PurchaseItem.Items">
+                    <td>{{i.Title}}</td>
+                    <td>{{i.Price}}</td>
+                    <td>{{i.Quantity}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="lead">
+        <a class="btn pull-right btn-danger" href="#" role="button">Total Cost {{Price}},Place Order</a>
+    </p>
+</div>
+<footer class="page-footer font-small blue fixed-bottom">
+    <div class="footer-copyright text-center py-3" style="color: grey;">
+        <h5>Explanation :</h5>
+        <p>This Demo is implemented with the help of Structure directive and displaying the data of purchaser and their
+        items purchased.
+        </p>
+    </div>
+  </footer>

@@ -1,0 +1,39 @@
+<!-- <input type="text" [(ngModel)]='c'>
+<button appChangecolor [color]='c'>Attribute</button> -->
+<!-- <h2>Attribute Directive demo</h2>
+<div class="row size">
+  <div class="col-md-6">
+    <input type="text" [(ngModel)] ='c' />
+  </div>
+  <div class="col-md-6">
+    <div appChangecolor [color] ='c'>
+      Hello World
+    </div>
+  </div>
+</div> -->
+<div class="container size">
+  <div class="row">
+    <h1 class="mx-auto my-4">Attribute Directive demo</h1>
+  </div>
+  <hr>
+  <div class="row my-5">
+    <div class="col-md-6" >
+      <input type="text" [(ngModel)] ='color' class="colorInput" placeholder="Enter Color"/>
+      
+    </div>
+    <div class="col-md-6">
+      <div appChangecolor [color] ='color'>
+        Move Mouse Over Me
+      </div>
+    </div>
+  </div>
+  
+</div>
+<footer class="page-footer font-small blue fixed-bottom">
+  <div class="footer-copyright text-center py-3" style="color: grey;">
+      <h5>Explanation :</h5>
+      <p>This is an example of attribute directive depicting the use of 'Host binding' and 'Host listener', we have provided one input field ,div and a button
+        the div and button will change their color and border once the color is proivded in input field.
+      </p>
+  </div>
+</footer>

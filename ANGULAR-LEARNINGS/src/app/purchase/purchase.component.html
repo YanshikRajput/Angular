@@ -1,0 +1,90 @@
+<!-- <div class = "row">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    PurchaseId
+                </th>
+                <th>
+                    PurchaseTitle
+                </th>
+                <th>
+                    PurchaseDate
+                </th>
+                <th>
+                    VendorName
+                </th>
+                <th>
+                    Items
+                </th>
+            </tr>
+        </thead>
+        <tbody> -->
+            <!-- <tr *ngFor = "let p of purchase">
+                <td>{{p.PurchaseId}}</td>
+                <td>{{p.PurchaseTitle}}</td>
+                <td>{{p.PurchaseDate}}</td>
+                <td>{{p.VendorName}}</td>
+                <td>{{p.Items}}</td>
+                <td>
+                    <ng-container *ngIf = "p.isInStock; then instock else outofstock"></ng-container>
+                    <ng-template #instock>
+                        <i class="fa fa-check"aria-hidden="true"></i>
+                    </ng-template>
+                    <ng-template #outofstock>
+                        <i class="fa fa-times"aria-hidden="true"></i>
+                        <button class="btn btn-default">Order Now</button>
+                    </ng-template> -->
+                <!-- </td> -->
+            <!-- </tr> -->
+        <!-- </tbody>
+    </table>
+</div> -->
+<div class="row">
+    <div class="col-sm-12">
+        <h2 class="text-danger text-center my-4">Master- Details using Component Communication</h2>
+    </div>
+</div>
+<div class="row">
+    <!-- <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    PurchaseId
+                </th>
+                <th>
+                    PurchaseTitle
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let p of purchase">
+                <td>{{p.PurchaseId}}</td>
+                <td><button class="btn btn-link">{{p.PurchaseTitle}}</button></td>
+            </tr>
+        </tbody>
+    </table> -->
+</div>
+<div class="col-md-12">
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel *ngFor="let p of purchase">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+        <h2>{{p.PurchaseId}}</h2>
+        </mat-panel-title>
+        <mat-panel-description>
+            <h2 class="text-info">{{p.PurchaseTitle}}</h2>
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-purchaseorder [PurchaseItem] = 'p'></app-purchaseorder>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
+<footer class="page-footer font-small blue fixed-bottom">
+    <div class="footer-copyright text-center py-3" style="color: grey;">
+        <h5>Explanation :</h5>
+        <p>In this component we make use @Input/@output directives in two components both of which have access to a service named dataservice
+            The component 1 fetches data from service and display an expansion panel, and that expansion panel contains a table of component 2.
+        </p>
+    </div>
+  </footer>

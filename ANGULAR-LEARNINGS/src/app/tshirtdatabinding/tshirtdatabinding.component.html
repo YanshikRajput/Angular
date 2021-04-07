@@ -1,0 +1,23 @@
+
+<div class="container" >
+  <div class="row mx-auto tshirtmargin my-5">
+    <input type = "number" [(ngModel)] ='Height' class="m-2 mx-auto p-3">
+    <input type = "number" [(ngModel)] = 'Width' class="m-2 mx-auto p-3">
+
+  </div>
+  <div class="row my-5">
+  <img class="img" (mouseleave)='ChangeTshirtMouseExit()' (mouseenter)='ChangeTshirtMouseEnter()' 
+  [src]='imgSource' [style.height.px]='Height' [style.width.px]='Width' class="tshirtmargin">
+  <!-- <div>
+    <button (click) ='generror()'>Generate Error</button>
+  </div> -->
+</div>
+</div>
+<footer class="page-footer font-small blue fixed-bottom">
+  <div class="footer-copyright text-center py-3" style="color: grey;">
+      <h5>Explanation :</h5>
+      <p>This is an example of Data Binding where we have provided two input fields for entering height and width of an image
+        by entering the dimension the size of image will change accordingly, also when we hover the curson on image, a new image will be visible
+      </p>
+  </div>
+</footer>

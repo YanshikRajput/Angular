@@ -1,0 +1,119 @@
+ <!-- <h1>Hello</h1>
+<button (Click) = 'setWidth()'[style.height.px]='a'[style.width.px]='b'>Click Me</button>
+<img src = "../assets/a.png"[style.height.px]='a'[style.width.px]='b'>
+<input type ="number"[(ngModel)] = 'a'then/> -->
+<!-- <div class="row">
+  <div clas="col-md-4">
+
+  </div>
+  <div class = "col-md-4">
+    <img(mouseenter)='ChangeTshirtMouseEnter()' (mouseLeave) = 'ChangeTshirtMouseExit()'
+    [src]='imgSource' [style.height.px]='height'
+    [style.width.px]='width'
+    class = "img img-fluid"/>
+  </div>
+  <div class= "col-md-4">
+
+  </div>
+</div> -->
+<!-- <div>
+  <div class = "row">
+    <div class = "col-md-2"></div>
+      <div class = "col-md-4"><h1>{{title}}</h1></div>
+      <div class = "col-md-2"></div>
+</div>
+<div></div>
+<input type = "number" [(ngModel)] =Height>
+<input type = "number" [(ngModel)] = Width>
+<br>
+<br>
+<img  (mouseleave)='ChangeTshirtMouseExit()' (mouseenter)='ChangeTshirtMouseEnter()' 
+[src]='imgSource' [style.height.px]='Height' [style.width.px]='Width'> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark btn-danger header">
+  <a class="navbar-brand" routerLink="/home">Yanshik Rajput</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <!-- <li class="nav-item ">
+        <a class="nav-link " routerLink="/home" >
+          Master-Details
+        </a>
+        
+      </li> -->
+      <li class="nav-item active mx-2" style="float:right">
+        <a class="nav-link" routerLink= "/data-binding">Databinding </a>
+      </li>
+      <li class="nav-item  active">
+        <a class="nav-link" routerLink= "/custom-attribute" >Structural Directive Demo</a>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link " routerLink="/products" >
+          Products
+        </a>
+        <li class="nav-item dropdown active">
+          <a class="nav-link " routerLink="/Master-Details" >
+            Master Details
+          </a>
+          <li class="nav-item dropdown active">
+            <a class="nav-link " routerLink="/Share-Data" >
+              Share-Data
+            </a>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink= "/Gen-Error" >GenerateError</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" routerLink= "/Login" >Login Forms</a>
+            </li>
+    </ul>
+    <!-- <form class="form-inline my-2 my-lg-0"> -->
+      <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+    <!-- </form> -->
+  </div>
+</nav>
+<router-outlet></router-outlet>
+
+ 
+
+<!-- <div class = "container">
+  <h1 class = "text-center">{{title}}</h1>
+  <div class="row">
+    <div class = "col-md-2">
+      <button routerLink="/data-binding"  (click) ='showDemo()' class = "btn btn-warning" > DataBinding Demo </button>
+    </div>
+
+
+    <div class="col-md-3">
+      <button routerLink= "/custom-attribute"(click)='showdirectiveDemoFunction()' class= "btn btn-warning"> Structural Directive Demo</button>
+    </div>
+    <div class="col-md-2">
+      <button routerLink='/products'(click)=' showProductsTable()' class="btn btn-warning">Product List</button>
+    </div>
+    <div class="col-md-2">
+      <button routerLink='/Master-Details'(click)=' MasterDetailsFunction()' class="btn btn-warning">Master Details</button>
+    </div>
+    <div class="col-md-2">
+      <button routerLink='/Share-Data'(click)=' showComponents()' class="btn btn-warning">Share Data</button>
+    </div>
+  </div>
+  <hr/>
+  <div class="col-md-12">
+    <app-tshirtdatabinding *ngIf = "isbindingvisivle"></app-tshirtdatabinding>
+    <app-hello *ngIf="issdvisible"></app-hello>
+    <app-product *ngIf ="showProductTable"></app-product>
+    <app-purchase *ngIf ="showPurchase"></app-purchase>
+  </div>
+  <div class="row">
+  <div class="col-md-6">
+<app-child1 *ngIf="showChild1"></app-child1>
+</div>
+
+<div class="col-md-6">
+<app-child2 *ngIf="showChild1"></app-child2>
+</div>
+</div> -->
+
